@@ -1,7 +1,4 @@
 # WebScraper
 
-![C#] public static void CreateHttpClient()
-{
-      httpClient = new HttpClient();
-}
+## Program.cs is sample code and WebScraper.cs is the web scraper code
 
