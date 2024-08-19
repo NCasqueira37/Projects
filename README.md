@@ -1,4 +1,4 @@
-# Projects
+## Projects
 Personal Projects made by me
 
 # WebScraper
