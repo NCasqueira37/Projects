@@ -1,0 +1,15 @@
+D:\_Projects\Client\bin\Debug\Client.exe.config
+D:\_Projects\Client\bin\Debug\Client.exe
+D:\_Projects\Client\bin\Debug\Client.pdb
+D:\_Projects\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\_Projects\Client\obj\Debug\MainWindow.g.cs
+D:\_Projects\Client\obj\Debug\App.g.cs
+D:\_Projects\Client\obj\Debug\Client_MarkupCompile.cache
+D:\_Projects\Client\obj\Debug\Client_MarkupCompile.lref
+D:\_Projects\Client\obj\Debug\MainWindow.baml
+D:\_Projects\Client\obj\Debug\Client.g.resources
+D:\_Projects\Client\obj\Debug\Client.Properties.Resources.resources
+D:\_Projects\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\_Projects\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\_Projects\Client\obj\Debug\Client.exe
+D:\_Projects\Client\obj\Debug\Client.pdb
