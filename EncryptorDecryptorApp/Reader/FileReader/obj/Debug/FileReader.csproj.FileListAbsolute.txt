@@ -1,0 +1,15 @@
+D:\_Projects\Reader\FileReader\bin\Debug\FileReader.exe.config
+D:\_Projects\Reader\FileReader\bin\Debug\FileReader.exe
+D:\_Projects\Reader\FileReader\bin\Debug\FileReader.pdb
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.csproj.AssemblyReference.cache
+D:\_Projects\Reader\FileReader\obj\Debug\MainWindow.g.cs
+D:\_Projects\Reader\FileReader\obj\Debug\App.g.cs
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader_MarkupCompile.cache
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader_MarkupCompile.lref
+D:\_Projects\Reader\FileReader\obj\Debug\MainWindow.baml
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.g.resources
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.Properties.Resources.resources
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.csproj.GenerateResource.cache
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.csproj.CoreCompileInputs.cache
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.exe
+D:\_Projects\Reader\FileReader\obj\Debug\FileReader.pdb

@@ -1,0 +1,164 @@
+﻿<Window x:Class="FileReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileReader"
+        mc:Ignorable="d"
+        Title="File Reader"
+        Height="450"
+        Width="800"
+        FontFamily="JetBrains Mono SemiBold"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF222222">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" MaxWidth="300" MinWidth="50"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Menu bar-->
+        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal">
+
+        </StackPanel>
+
+        <!--Buttons-->
+        <StackPanel Grid.Row="2" Margin="5">
+            <Button
+                Name="button_FilePicker"
+                Content="Pick File"
+                Background="#FF100038"
+                FontFamily="JetBrains Mono SemiBold"
+                Foreground="White"
+                Click="button_FilePicker_Click"/>
+
+            <Button
+                Name="button_Encryptor"
+                Content="Encrypt"
+                Background="#FF100038"
+                FontFamily="JetBrains Mono SemiBold"
+                Foreground="White"
+                Click="button_Encryptor_Click"/>
+
+            <Button
+                Name="button_Decryptor"
+                Content="Decrypt"
+                Background="#FF100038"
+                FontFamily="JetBrains Mono SemiBold"
+                Foreground="White"
+                Click="button_Decryptor_Click"/>
+
+            <Button
+                Name="button_SaveFile"
+                Content="SaveFile"
+                Background="#FF100038"
+                FontFamily="JetBrains Mono SemiBold"
+                Foreground="White"
+                Click="button_SaveFile_Click"/>
+
+            <Button
+                Name="button_NewText"
+                Content="Output to Input"
+                Background="#FF100038"
+                FontFamily="JetBrains Mono SemiBold"
+                Foreground="White"
+                Click="button_NewText_Click"/>
+
+        </StackPanel>
+
+        
+        <!--Grid Splitters-->
+        <GridSplitter
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            ResizeDirection="Columns"/>
+
+        <GridSplitter
+            Grid.Column="3"
+            Grid.Row="2"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            ResizeDirection="Columns"/>
+
+        <!--Input/Output Text Blocks-->
+        <ScrollViewer Grid.Row="2" Grid.Column="4" Margin="5">
+            <TextBox
+                Name="textbox_Output"
+                Grid.Column="2"
+                Grid.Row="1"
+                FontFamily="JetBrains Mono SemiBold"
+                IsReadOnly="True"
+                TextWrapping="Wrap"
+                FontSize="16"/>
+        </ScrollViewer>
+
+
+        <ScrollViewer Grid.Row="2" Grid.Column="2" Margin="5">
+            <TextBox
+                Name="textbox_Input"
+                Grid.Column="4"
+                Grid.Row="1"
+                FontFamily="JetBrains Mono SemiBold"
+                IsReadOnly="True"
+                TextWrapping="Wrap"
+                FontSize="16"/>
+        </ScrollViewer>
+
+        <!--Input/Output Title Text Blocks-->
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="2"
+            Text="Input"
+            FontFamily="JetBrains Mono SemiBold"
+            FontSize="16"
+            TextWrapping="Wrap"
+            HorizontalAlignment="Center"
+            Foreground="White"/>
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="4"
+            Text="Output"
+            FontFamily="JetBrains Mono SemiBold"
+            FontSize="16"
+            TextWrapping="Wrap"
+            HorizontalAlignment="Center"
+            Foreground="White"/>
+        
+        <!--Menu Bar-->
+        <StackPanel Orientation="Horizontal">
+            <Menu Background="#00F0F0F0" Foreground="White" FontFamily="JetBrains Mono SemiBold">
+                <!--Menu-->
+                <MenuItem Header="Menu" Background="#FF222222" BorderBrush="#FF222222">
+                    <MenuItem
+                        Header="Quit"
+                        Background="#FF222222"
+                        BorderBrush="#FF222222"
+                        FontFamily="JetBrains Mono SemiBold"
+                        Click="MenuItem_Click"/>
+
+                    </MenuItem>
+                <!--Settings Bar-->
+                <MenuItem Header="Settings" Background="#FF222222" BorderBrush="#FF222222">
+                    <MenuItem Header="Encryption Type" Background="#FF222222" BorderBrush="#FF222222" FontFamily="JetBrains Mono SemiBold">
+                        <RadioButton Name="radioButton_CaesarCipher" Content="Caesar Cipher" IsChecked="true" FontFamily="JetBrains Mono SemiBold"/>
+                        <RadioButton Name="radioButton_Rot13" Content="ROT13" FontFamily="JetBrains Mono SemiBold"/>                    
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+
+        <Image Name="MyImage"/>
+    </Grid>
+</Window>
