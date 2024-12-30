@@ -1,5 +1,4 @@
 # Projects
-Personal Projects made by me
 
 ## WebScraper
 This web scraper can grab public data from static HTML pages. I used an HTTP Client to request data from a website. This was made in C#.
