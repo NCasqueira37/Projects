@@ -1,14 +1,14 @@
 #include <iostream>
 #include "SDL.h"
-#include "Vector2Int.h"
+#include "Game.h"
 
 int main(int argc, char* argv[])
 {
+	// Variables
 	std::string windowTitle = "SDL Window";
 	int windowWidth = 800;
 	int windowHeight = 600;
 
-	bool running = true;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 
@@ -18,20 +18,38 @@ int main(int argc, char* argv[])
 		SDL_Quit();
 	}
 	else {
-		SDL_CreateWindowAndRenderer(windowWidth, windowHeight, SDL_RENDERER_ACCELERATED, &window, &renderer);
-		SDL_SetWindowTitle(window, windowTitle.c_str());
-	}
+		window = SDL_CreateWindow(windowTitle.c_str(),
+			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, windowWidth, windowHeight, 0);
+		
+		if (window == nullptr) {
+			std::cout << SDL_GetError() << std::endl;
+		}
+		else {
+			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+			if (renderer == nullptr) {
+				std::cout << SDL_GetError() << std::endl;
+			}
+			else {
+				// For transparent graphics
+				SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
-	SDL_Event event;
-	while (running) {
-		while (SDL_PollEvent(&event) != 0) {
-			if (event.type == SDL_QUIT) {
-				running = false;
+				// Anti-Aliasing
+				SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
+
+				// render Driver
+				SDL_RendererInfo rendererInfo;
+				SDL_GetRendererInfo(renderer, &rendererInfo);
+				std::cout << "Renderer = " << rendererInfo.name << std::endl;
+
+				// Start Game
+				Game game(window, renderer, windowWidth, windowHeight);
+
+				// Destroy Renderer 
+				SDL_DestroyRenderer(renderer);
 			}
 		}
+		SDL_DestroyWindow(window);
 	}
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
 	SDL_Quit();
 
 	return 0;
